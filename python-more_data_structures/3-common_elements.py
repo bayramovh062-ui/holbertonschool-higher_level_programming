@@ -8,4 +8,4 @@ def common_elements(set_1, set_2):
                 is_have = True
         if is_have == True:
             new_set.add(i)
-    return new_list
+    return new_set
