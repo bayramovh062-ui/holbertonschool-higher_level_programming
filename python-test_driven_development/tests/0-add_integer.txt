@@ -1,0 +1,48 @@
+======================================
+How to Use 0-add_integer
+======================================
+
+This module defines a function `add_integer(a, b=98)`.
+It adds two integers or floats.
+
+Usage examples:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Positive and negative integers:
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+
+Testing default argument `b=98`:
+>>> add_integer(2)
+100
+
+Testing floats (they must be casted to integers):
+>>> add_integer(100.3, -2)
+98
+>>> add_integer(10.9, 10.1)
+20
+
+Testing boolean trap (True/False should raise TypeError):
+>>> add_integer(True)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+Testing with strings:
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_integer("Hello", 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+Testing with None:
+>>> add_integer(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
