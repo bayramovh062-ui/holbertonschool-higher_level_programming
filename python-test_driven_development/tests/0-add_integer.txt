@@ -22,17 +22,21 @@ Testing default argument `b=98`:
 >>> add_integer(-2)
 96
 
-Testing floats (they must be casted to integers):
->>> add_integer(100.3, -2)
-98
+Testing floats (casting to int truncates, it does NOT round):
 >>> add_integer(10.9, 10.1)
 20
+>>> add_integer(2.9, 2.9)
+4
+>>> add_integer(-2.9, -2.9)
+-4
+>>> add_integer(100.3, -2)
+98
 >>> add_integer(2, 4.5)
 6
 >>> add_integer(2.5)
 100
 
-Testing boolean trap (True/False should raise TypeError):
+Testing boolean trap:
 >>> add_integer(True)
 Traceback (most recent call last):
     ...
@@ -43,7 +47,7 @@ Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 
-Testing with strings (even string numbers should fail):
+Testing with strings:
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
@@ -54,12 +58,18 @@ Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
->>> add_integer("5", 5)
+Testing BOTH invalid arguments (must check 'a' first):
+>>> add_integer("Hello", "World")
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-Testing with None:
+>>> add_integer(None, None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+Testing None:
 >>> add_integer(None)
 Traceback (most recent call last):
     ...
@@ -70,13 +80,19 @@ Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 
-Testing with lists and dicts:
->>> add_integer([1, 2], 3)
+Testing keyword arguments:
+>>> add_integer(a=1, b=2)
+3
+>>> add_integer(b=2, a=3)
+5
+
+Testing kwargs with invalid types:
+>>> add_integer(a="Hello", b=2)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
->>> add_integer(1, {"a": 1})
+>>> add_integer(a=1, b="School")
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
@@ -92,3 +108,14 @@ Too many arguments:
 Traceback (most recent call last):
     ...
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Infinity and NaN behavior (should raise naturally):
+>>> add_integer(float('inf'), 2)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float('nan'), 2)
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
