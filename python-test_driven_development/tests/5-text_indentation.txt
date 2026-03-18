@@ -1,0 +1,60 @@
+=======================================
+How to use 5-text_indentation.py
+=======================================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+1. Normal test cases (string)
+>>> text_indentation("Hello. How are you? I am fine: thanks")
+Hello.
+
+How are you?
+
+I am fine:
+
+thanks
+
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Quonam modo?
+
+>>> text_indentation("")
+
+2. The argument is not a string
+>>> text_indentation(5)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation(2.25)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation([2, 4])
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation({"name": "Hussein"})
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+3. Missing argument
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+4. Too many arguments
+>>> text_indentation("hello", "world")
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
