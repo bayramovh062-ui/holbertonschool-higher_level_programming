@@ -7,17 +7,19 @@ How to use 5-text_indentation.py
 1. Normal test cases (string)
 >>> text_indentation("Hello. How are you?")
 Hello.
-
+<BLANKLINE>
 How are you?
+<BLANKLINE>
 
 >>> text_indentation("")
 
 >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
+<BLANKLINE>
 Quonam modo?
-
+<BLANKLINE>
 Utrum igitur tibi litteram videor an totas paginas commovere?
+<BLANKLINE>
 
 2. The argument is not a string
 >>> text_indentation(5)
