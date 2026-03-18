@@ -5,21 +5,19 @@ How to use 5-text_indentation.py
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 1. Normal test cases (string)
->>> text_indentation("Hello. How are you? I am fine: thanks")
+>>> text_indentation("Hello. How are you?")
 Hello.
 
 How are you?
 
-I am fine:
+>>> text_indentation("")
 
-thanks
-
->>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 Quonam modo?
 
->>> text_indentation("")
+Utrum igitur tibi litteram videor an totas paginas commovere?
 
 2. The argument is not a string
 >>> text_indentation(5)
@@ -37,7 +35,7 @@ Traceback (most recent call last):
     ...
 TypeError: text must be a string
 
->>> text_indentation({"name": "Hussein"})
+>>> text_indentation({"name": "Hussein", "first_name": "Bayramov"})
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
