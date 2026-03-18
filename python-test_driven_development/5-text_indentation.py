@@ -12,15 +12,15 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     text = text.strip()
-    
+
     skip_space = False
     for char in text:
         if skip_space and char == ' ':
             continue
-        
+
         skip_space = False
         print(char, end="")
-        
+
         if char in ".?:":
             print("\n")
             skip_space = True
