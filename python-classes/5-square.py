@@ -1,4 +1,4 @@
-#!/usr/bin/python3i
+#!/usr/bin/python3
 """
 This module defines a Square class with getter and setter.
 """
@@ -48,7 +48,7 @@ class Square:
     
     def my_print(self):
         """
-        Prints in stdout the square with the charachter #
+        Prints in stdout the square with the character #
         """
         if self.size == 0:
             print()
