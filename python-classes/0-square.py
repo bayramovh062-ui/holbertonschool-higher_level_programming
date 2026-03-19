@@ -10,4 +10,3 @@ class Square:
     Now this class is empty.
     """
     pass
-
