@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a Square class.
+This module defines a Square class with getter and setter.
 """
 
 
@@ -14,7 +14,7 @@ class Square:
         Initializes a new Square instance.
 
         Args:
-            size: The size of the square (no type/value verification yet).
+            size (int): The size of the square.
         """
         self.size = size
 
@@ -33,14 +33,15 @@ class Square:
         Args:
             value (int): The new size to set.
         """
-        if type(size) is not int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
+
         self.__size = value
 
     def area(self):
         """
-        this function returns area of square
+        Returns the current square area.
         """
         return self.__size ** 2
