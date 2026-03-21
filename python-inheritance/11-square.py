@@ -28,4 +28,4 @@ class Square(Rectangle):
         """
         returns right string format
         """
-        return f"[square] {self.size}/{self.size}"
+        return f"[Square] {self.__size}/{self.__size}"
