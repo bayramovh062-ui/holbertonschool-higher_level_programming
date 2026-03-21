@@ -91,4 +91,4 @@ class Rectangle:
         """
         this function prints a message when an object remove
         """
-        print("Bye rectangle")
+        print("Bye rectangle...")
