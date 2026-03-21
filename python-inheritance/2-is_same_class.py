@@ -8,4 +8,6 @@ def is_same_class(obj, a_class):
     """
     this function checks that obj in the class or not
     """
-    return isinstance(obj, a_class)
+    if isinstance(obj, a_class):
+        return True
+    return False
