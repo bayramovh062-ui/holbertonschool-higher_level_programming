@@ -89,4 +89,4 @@ class Rectangle:
         this function returns a string that you can create a
         new rectangle with its result
         """
-        return f'Renctangle({self.__width}, {self.__height})'
+        return f'Rectangle({self.__width}, {self.__height})'
