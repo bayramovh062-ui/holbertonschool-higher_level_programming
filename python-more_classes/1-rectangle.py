@@ -9,7 +9,6 @@ class Rectangle:
     rectangle represents a renctangle
     """
 
-
     def __init__(self, width=0, height=0):
         """
         we can initalization object of this class
