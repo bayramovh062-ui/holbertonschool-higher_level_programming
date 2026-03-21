@@ -4,7 +4,7 @@ this module find sorted list
 """
 
 
-class Mylist(list):
+class MyList(list):
     """
     MyList class that inherits from the built-in list class.
     """
