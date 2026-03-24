@@ -33,7 +33,7 @@ class Circle(Shape):
 
     def perimeter(self):
         """Calculates Circle perimeter."""
-        return 2 * math.pi * self.radius
+        return 2 * math.pi * abs(self.radius)
 
 
 class Rectangle(Shape):
