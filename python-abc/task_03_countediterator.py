@@ -1,4 +1,4 @@
-#!/bin/usr/env python3
+#!/usr/bin/env python3
 """
 this module extend properties of __next__ method
 """
@@ -12,7 +12,7 @@ class CountedIterator():
         """
         this function count values and increase them 
         """
-        self.iterator = iter(some_iterator)
+        self.iterator = iter(some_iterable)
         self.counter = 0
 
     def get_count(self):
