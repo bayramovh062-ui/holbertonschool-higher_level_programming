@@ -4,34 +4,34 @@ this module explains multi inheritance with examples
 """
 
 
-class Fish():
+class Fish:
     """
     this class gives us information about fish
     """
-    def swim():
+    def swim(self):
         """
         this function prints information about fish's activity
         """
         print("The fish is swimming")
 
-    def habitat():
+    def habitat(self):
         """
         this function prints information about fish's envoriment
         """
         print("The fish lives in water")
 
 
-class Bird():
+class Bird:
     """
     this class gives us information about bird
     """
-    def fly():
+    def fly(self):
         """
         this function prints information about bird's activity
         """
         print("The bird is flying")
 
-    def habitat():
+    def habitat(self):
         """
         this function prints information about bird's envoriment
         """
@@ -44,19 +44,19 @@ class FlyingFish(Fish, Bird):
     with use multi inheritance
     """
 
-    def fly():
+    def fly(self):
         """
         this function override fly method
         """
         print("The flying fish is soaring!")
 
-    def swim():
+    def swim(self):
         """
         this function override swim method
         """
         print("The flying fish is swimming!")
 
-    def habitat():
+    def habitat(self):
         """
         this function override habitat method
         """
