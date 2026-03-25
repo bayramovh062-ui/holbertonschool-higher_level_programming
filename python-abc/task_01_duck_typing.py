@@ -40,7 +40,7 @@ class Circle(Shape):
 class Rectangle(Shape):
     """Rectangle class representing a rectangle"""
 
-    def __init__(self, width, height):
+    ef __init__(self, width, height):
         """Initialize Rectangle with width and height"""
         self.width = width
         self.height = height
