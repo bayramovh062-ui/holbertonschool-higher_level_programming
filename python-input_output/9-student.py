@@ -5,7 +5,7 @@ new student object and returns json format of object
 """
 
 
-class student():
+class Student():
     """
     this class represents student
     """
@@ -17,7 +17,6 @@ class student():
         self.last_name = last_name
         self.age = age
 
-    @proprty
     def to_json(self):
         """
         this function retrieves a dictionary represents student
