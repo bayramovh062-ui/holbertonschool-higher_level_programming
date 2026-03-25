@@ -5,7 +5,7 @@ using pythons's write command with a mode
 """
 
 
-def append_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
     this functipn append text to a file and
     returns number of characthers added
