@@ -4,6 +4,8 @@ this module contains a function and this function returns
 pascal's triangle depend on n variable's value if n <=0 then
 function returns an empty list
 """
+
+
 def pascal_triangle(n):
     """
     this function returns pascal's triangle depend on n variable's
