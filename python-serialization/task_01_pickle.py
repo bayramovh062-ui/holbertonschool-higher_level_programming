@@ -34,9 +34,9 @@ class CustomObject():
         with uing pickle
         """
         try:
-            with open(filename, 'wb', encoding="utf-8") as f:
+            with open(filename, 'wb') as f:
                 pickle.dump(self, f)
-        except exception:
+        except Exception:
             return None
 
     @classmethod
@@ -45,7 +45,7 @@ class CustomObject():
         this function deserializes object from file with using pickle
         """
         try:
-            with open(filename, 'rb', encoding="utf-8") as f:
+            with open(filename, 'rb') as f:
                 return pickle.load(f)
-        except exception:
+        except Exception:
             return None
