@@ -56,6 +56,6 @@ class SimpleAPI(http.server.BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    server_address = ("", 8000)
+    server_address = ("localhost", 8000)
     httpd = http.server.HTTPServer(server_address, SimpleAPI)
-    httpd.serve_forever())
+    httpd.serve_forever()
