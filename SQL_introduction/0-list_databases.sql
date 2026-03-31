@@ -1,1 +1,3 @@
-show databases
+-- this codes shows all databases
+
+SHOW DATABASES;
