@@ -1,3 +1,3 @@
 -- this code removes a database if it exists
 
-DELETE DATABESE IF EXISTS hbtn_0c_0
+DELETE DATABESE IF EXISTS hbtn_0c_0;
