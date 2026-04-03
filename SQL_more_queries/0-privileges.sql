@@ -1,4 +1,4 @@
--- this sql code shows user1 and user2 's permissions on database
+-- this code shows permissions on databases for user_0d_1 and user_0d_2
 
-SHOW GRANTS FOR 'user_0d_1@localhost';
-SHOW GRANTS FOR 'user_0d_2@localhost';
+SHOW GRANTS FOR 'user_0d_1@''localhost';
+SHOW GRANTS FOR 'user_0d_2@''localhost';
