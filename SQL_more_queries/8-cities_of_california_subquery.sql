@@ -5,3 +5,4 @@ WHERE id = (
 	SELECT state_id FROM states
 	WHERE name = 'california'
 )
+ORDER BY id;
