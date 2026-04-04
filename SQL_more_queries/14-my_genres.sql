@@ -1,0 +1,5 @@
+-- we can list tw_shows base's title column and tv_show_genres base's genre_id column with using this code
+
+SELECT tv_genres.name FROM tv_genres
+JOIN tv_show_genres ON tv_genres.id = tv_show_genres.genre_id JOIN ON tv_show_genres.show_id = tv_shows.id
+ORDER BY tv_genres.name;
