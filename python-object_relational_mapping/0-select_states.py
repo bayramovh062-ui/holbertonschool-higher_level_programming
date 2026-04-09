@@ -6,7 +6,7 @@ this python code shows us state table's data
 import sys
 import MySQLdb
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     usernamedb = sys.argv[1]
     passworddb = sys.argv[2]
     namedb = sys.argv[3]
@@ -14,7 +14,7 @@ if __name__ = "__main__":
             host = "localhost",
             user = usernamedb,
             passwd = passworddb,
-            db = namedb
+            db = namedb,
             port = 3306
     )
     c = db.cursor()
