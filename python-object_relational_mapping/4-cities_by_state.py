@@ -7,6 +7,7 @@ with using join
 
 import sys
 import MySQLdb
+
 if __name__ == "__main__":
     username, password, name = sys.argv[1:]
     db = MySQLdb.connect(
@@ -18,7 +19,7 @@ if __name__ == "__main__":
     )
     c = db.cursor()
     rows = c.execute(
-                "SELECT cities.id, cities.name, states.name",
+                "SELECT cities.id, cities.name, states.name"
                 "FROM cities JOIN states ON cities.state_id"
                 "ORDER BY cities.id"
             )
