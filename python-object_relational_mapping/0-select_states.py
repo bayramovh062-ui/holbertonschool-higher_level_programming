@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 this python code shows us state table's data
 """
