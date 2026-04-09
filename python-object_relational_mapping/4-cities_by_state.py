@@ -18,12 +18,13 @@ if __name__ == "__main__":
             port=3306
     )
     c = db.cursor()
-    rows = c.execute(
-                "SELECT cities.id, cities.name, states.name"
-                "FROM cities JOIN states ON cities.state_id"
-                "ORDER BY cities.id"
-            )
-    for row in rowsL:
+    c.execute(
+            "SELECT cities.id, cities.name, states.name"
+            "FROM cities JOIN states ON cities.state_id"
+            "ORDER BY cities.id"
+        )
+    rows = c.fetcj=hall()
+    for row in rows:
         print(row)
     c.close()
     db.close()
