@@ -19,13 +19,13 @@ if __name__ == "__main__":
     )
     c = db.cursor()
     c.execute(
-            "SELECT cities.id, cities.name, states.name "
+            "SELECT cities.name "
             "FROM cities JOIN states ON cities.state_id = states.id "
             "WHERE states.name = %s "
             "ORDER BY cities.id"
         ), (state_name,)
     rows = c.fetchall()
-    for row in rows:
-        print(row)
+    city_names = [row[0] for row in rows]
+    print(", ".join(city_names))
     c.close()
     db.close()
