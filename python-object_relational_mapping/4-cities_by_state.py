@@ -23,7 +23,7 @@ if __name__ == "__main__":
             "FROM cities JOIN states ON cities.state_id"
             "ORDER BY cities.id"
         )
-    rows = c.fetcj=hall()
+    rows = c.fetchall()
     for row in rows:
         print(row)
     c.close()
