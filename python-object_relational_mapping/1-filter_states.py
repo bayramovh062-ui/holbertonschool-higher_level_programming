@@ -15,7 +15,7 @@ if __name__ == "__main__":
         passwd=password,
         user=username,
         port=3306,
-        db = name
+        db=name
     )
     c = db.cursor()
     c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
