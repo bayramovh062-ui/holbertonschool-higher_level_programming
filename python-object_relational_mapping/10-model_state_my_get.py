@@ -22,7 +22,7 @@ if __name__ == "__main__":
     session = Session()
     state = (
                 session.query(State)
-                .filter(State.name == sys.qrgv[4])
+                .filter(State.name == sys.argv[4])
                 .first()
             )
     if state is None:
