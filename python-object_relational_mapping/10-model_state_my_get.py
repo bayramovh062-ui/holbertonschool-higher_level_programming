@@ -26,7 +26,7 @@ if __name__ == "__main__":
                 .first()
             )
     if state:
-        print("{}".format(state.id))
+        print(state.id)
     else:
         print("Not found")
     session.close()
