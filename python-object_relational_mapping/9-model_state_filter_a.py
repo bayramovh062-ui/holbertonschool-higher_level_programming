@@ -7,7 +7,7 @@ but only rows which one state_name contains a symbol
 
 import sys
 from sqlalchemy import create_engine
-from sqlalchemy import sessionmaker
+from sqlalchemy.orm import sessionmaker
 from model_state import State, Base
 
 if __name__ == "__main__":
