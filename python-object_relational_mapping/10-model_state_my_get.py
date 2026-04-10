@@ -13,7 +13,7 @@ from model_state import Base, State
 
 if __name__ == "__main__":
     engine = create_engine(
-                'mysql+mysqldb://{}:{}@localhost:3306/{}'/format(
+                'mysql+mysqldb://{}:{}@localhost/{}'/format(
                         sys.argv[1], sys.argv[2], sys.argv[3]
                     ),
                 pool_pre_ping=True
@@ -25,8 +25,8 @@ if __name__ == "__main__":
                 .filter(State.name == sys.argv[4])
                 .first()
             )
-    if state is None:
-        print("Not found")
-    else:
+    if state:
         print("{}".format(state.id))
+    else:
+        print("Not found")
     session.close()
