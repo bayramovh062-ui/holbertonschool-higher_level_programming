@@ -26,6 +26,6 @@ if __name__ == "__main__":
                 .order_by(City.id)
                 .all()
             )
-    for state, city in city_and_state_information:
-        print("{}: ({}) {}".format(state.name, city.id, city.name))
+    for STate, CIty in city_and_state_information:
+        print("{}: ({}) {}".format(STate.name, CIty.id, CIty.name))
     session.close()
