@@ -17,7 +17,7 @@ if __name__ == "__main__":
                         username, password, db_name
                     )
             )
-    Session = sessionmaker()
+    Session = sessionmaker(bind=engine)
     session = Session()
     delete_rows = (
                 session.query(State)
