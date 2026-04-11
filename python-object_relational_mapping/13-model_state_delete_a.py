@@ -22,7 +22,7 @@ if __name__ == "__main__":
     session = Session()
     delete_rows = (
                 session.query(State)
-                .filter(State.name.op(('LIKE BINARY')('%a%')))
+                .filter(State.name.op('LIKE BINARY')('%a%'))
                 .all()
             )
     for delete_row in delete_rows:
