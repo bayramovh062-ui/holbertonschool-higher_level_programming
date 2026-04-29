@@ -6,7 +6,7 @@ this code  is an example of server side rendering
 
 import os
 
-def genarate_invitations(template, attendees):
+def generate_invitations(template, attendees):
     """
     this function is using for define template and
     attends and create a template with using these
