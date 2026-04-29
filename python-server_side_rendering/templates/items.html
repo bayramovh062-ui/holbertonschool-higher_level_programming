@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items List</title>
+</head>
+<body>
+    <h1>Items List</h1>
+
+    {# Əgər siyahı boş deyilsə #}
+    {% if items %}
+        <ul>
+            {# Siyahıdakı hər bir element üçün döngü qururuq #}
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {# Əgər siyahı boşdursa #}
+    {% else %}
+        <p>No items found</p>
+    {% endif %}
+
+</body>
+</html>
